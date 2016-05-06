@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en' lang='en'>
@@ -97,6 +98,10 @@
 </pre></td>
 <td class='lines'><pre><code>From f1b6e49f12a18eabe88eb732b578a16281d09499 Mon Sep 17 00:00:00 2001
 From: Jose Lamego &lt;jose.a.lamego&#64;linux.intel.com&gt;
+=======
+From f1b6e49f12a18eabe88eb732b578a16281d09499 Mon Sep 17 00:00:00 2001
+From: Jose Lamego <jose.a.lamego@linux.intel.com>
+>>>>>>> Initial work for migration to Yocto Krogoth
 Date: Thu, 2 Jul 2015 11:37:43 +0000
 Subject: [PATCH] serf.m4: Regex modified to allow '-D' in paths
 
@@ -104,15 +109,23 @@ Upstream-Status: Accepted
 
 The patch is merged by subversion upstream with replacing '[[:space:]]' with ' '.
 
+<<<<<<< HEAD
 http://svn.apache.org/viewvc/subversion/trunk/build/ac-macros/serf.m4?r1=1594156&amp;r2=1689824  
 
 Signed-off-by: Jose Lamego &lt;jose.a.lamego&#64;linux.intel.com&gt;
 <span class="hl kwb">---</span>
+=======
+http://svn.apache.org/viewvc/subversion/trunk/build/ac-macros/serf.m4?r1=1594156&r2=1689824  
+
+Signed-off-by: Jose Lamego <jose.a.lamego@linux.intel.com>
+---
+>>>>>>> Initial work for migration to Yocto Krogoth
  build/ac-macros/serf.m4 | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/build/ac-macros/serf.m4 b/build/ac-macros/serf.m4
 index ae11e75..ff8cbae 100644
+<<<<<<< HEAD
 <span class="hl kwb">--- a/build/ac-macros/serf.m4</span>
 <span class="hl kwa">+++ b/build/ac-macros/serf.m4</span>
 <span class="hl kwd">&#64;&#64; -168,7 +168,7 &#64;&#64;</span>
@@ -133,3 +146,19 @@ index ae11e75..ff8cbae 100644
 </div> <!-- id=cgit -->
 </body>
 </html>
+=======
+--- a/build/ac-macros/serf.m4
++++ b/build/ac-macros/serf.m4
+@@ -168,7 +168,7 @@
+         if $PKG_CONFIG $serf_pc_arg --atleast-version=$serf_check_version; then
+           AC_MSG_RESULT([yes])
+           serf_found=yes
+-          SVN_SERF_INCLUDES=[`$PKG_CONFIG $serf_pc_arg --cflags | $SED -e 's/-D[^ ]*//g'`]
++          SVN_SERF_INCLUDES=[`$PKG_CONFIG $serf_pc_arg --cflags | $SED -e 's/ -D[^ ]*//g' -e 's/^-D[^ ]*//g'`]
+           SVN_SERF_LIBS=`$PKG_CONFIG $serf_pc_arg --libs-only-l` 
+           dnl don't use --libs-only-L because then we might miss some options
+           LDFLAGS=["$LDFLAGS `$PKG_CONFIG $serf_pc_arg --libs | $SED -e 's/-l[^ ]*//g'`"]
+-- 
+1.8.4.5
+
+>>>>>>> Initial work for migration to Yocto Krogoth
