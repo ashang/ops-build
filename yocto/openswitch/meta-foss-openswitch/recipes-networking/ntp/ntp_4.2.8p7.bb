@@ -11,9 +11,10 @@ LIC_FILES_CHKSUM = "file://COPYRIGHT;md5=f41fedb22dffefcbfafecc85b0f79cfa"
 DEPENDS = "libevent libenv-perl libcap"
 RDEPENDS_${PN} += "perl"
 
-SRC_URI = "http://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/ntp-4.2/ntp-${PV}.tar.gz"
-SRC_URI[md5sum] = "6af96862b09324a8ef965ca76b759c8b"
-SRC_URI[sha256sum] = "0d6961572548d2c4af96f58f763e22ac620f5afef717384ddc317a0e365cfdb9"
+SRC_URI = "http://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/ntp-4.2/ntp-${PV}.tar.gz \
+"
+SRC_URI[md5sum] = "46dfba933c3e4bc924d8e55068797578"
+SRC_URI[sha256sum] = "81d20c06a0b01abe3b84fac092185bf014252d38fe5e7b2758f604680a0220dc"
 
 inherit autotools pkgconfig
 
